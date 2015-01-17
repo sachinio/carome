@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-2.1.2.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+    <script src="carousel.js"></script>
+    <style>
+        #container {
+            height: 300px;
+            width: 800px;
+            background-color: #adacb1;
+            overflow: hidden;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+</div>
+<script>
+    $(document).ready(function () {
+        var bar;
+        bar = $('#container').carousel({
+            data: [
+                {
+                    background: 'url("https://cdn3.iconfinder.com/data/icons/picons-social/57/46-facebook-128.png")',
+                    label: 'Facebook'
+                },
+                {
+                    background: 'url("https://cdn3.iconfinder.com/data/icons/picons-social/57/03-twitter-128.png")',
+                    label: 'Twitter'
+                },
+                {
+                    background: 'url("https://cdn3.iconfinder.com/data/icons/picons-social/57/18-youtube-128.png")',
+                    label: 'Youtube'
+                },
+                {
+                    background: 'url("https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-128.png")',
+                    label: 'Apple'
+                },
+                {
+                    background: 'url("https://cdn3.iconfinder.com/data/icons/picons-social/57/73-pinterest-128.png")',
+                    label: 'Pintrest'
+                },
+                {
+                    background: 'url("https://cdn3.iconfinder.com/data/icons/picons-social/57/38-instagram-128.png")',
+                    label: 'Instagram'
+                },
+                {
+                    background: 'url("https://cdn3.iconfinder.com/data/icons/picons-social/57/71-dropbox-128.png")',
+                    label: 'Dropbox'
+                },
+                {
+                    background: 'url("https://cdn3.iconfinder.com/data/icons/picons-social/57/19-delicious-128.png")',
+                    label: 'Delicious'
+                }
+            ],
+            maxItems: 5,
+            itemHeight: 128,
+            itemWidth: 128,
+            heightDelta: 128 / 2,
+            dataProperty: 'background-image',
+            delay: 2,
+            interval: 1
+        });
+        bar.carousel('start');
+    });
+</script>
+</body>
+</html>
